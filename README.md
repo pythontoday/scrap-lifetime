@@ -18,4 +18,4 @@ $ python main.py
 ```
 ---
 
-[Code](https://github.com/pythontoday/scrap-lifetime/main.py)
+[Code](https://github.com/pythontoday/scrap-lifetime/blob/master/main.py)
