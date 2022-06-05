@@ -7,7 +7,7 @@ from datetime import datetime
 
 def collect_data():
     proxies = {
-        'https': f'http://{os.getenv("LOGIN")}:{os.getenv("PASSWORD")}@163.198.213.235:8000'
+        'https': f'http://{os.getenv("LOGIN")}:{os.getenv("PASSWORD")}@proxy:port'
     }
 
     t_date = datetime.now().strftime('%d_%m_%Y')
