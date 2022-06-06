@@ -14,7 +14,7 @@ def collect_data():
     
     response = requests.get(url='https://www.lifetime.plus/api/analysis2', proxies=proxies)
     
-    # with open(f'info_{t_date}.json', 'w') as file:
+    # with open(f'info_{t_date}.json', 'w', encoding='utf-8') as file:
     #     json.dump(response.json(), file, indent=4, ensure_ascii=False)
         
     categories = response.json()['categories']
@@ -29,11 +29,11 @@ def collect_data():
             item_price = item.get('price')
             item_desc = item.get('description').strip()
             
-            if 'β' in item_desc:
-                item_desc = item_desc.replace('β', 'B')
+            # if 'β' in item_desc:
+            #     item_desc = item_desc.replace('β', 'B')
 
-            if 'γ' in item_desc:
-                item_desc = item_desc.replace('γ', 'Y')
+            # if 'γ' in item_desc:
+            #     item_desc = item_desc.replace('γ', 'Y')
                 
             item_wt = item.get('days')
             item_bio = item.get('biomaterial')
@@ -42,7 +42,7 @@ def collect_data():
                 [c_name, item_name, item_bio, item_desc, item_price, item_wt]
             )
             
-    with open(f'result_{t_date}.csv', 'a') as file:
+    with open(f'result_{t_date}.csv', 'a', encoding='utf-8') as file:
         writer = csv.writer(file)
         
         writer.writerow(
