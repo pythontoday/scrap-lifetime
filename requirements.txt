@@ -1,1 +1,5 @@
 requests==2.27.1
+#pip install python3
+#what to add
+#here we go
+#
